@@ -1,4 +1,4 @@
-﻿const canvas = document.getElementById("scene");
+const canvas = document.getElementById("scene");
 
 const ctx = canvas.getContext("2d");
 
@@ -305,7 +305,7 @@ function getSpriteMetrics() {
 
   }
 
-  const targetHeight = collector.height * spriteScaleFactor;
+  const targetHeight = collector.height * getSpriteScaleFactor();
 
   const scale = targetHeight / collectorSprite.height;
 
@@ -318,6 +318,17 @@ function getSpriteMetrics() {
   return { drawW, drawH, groundY };
 
 }
+
+function getSpriteScaleFactor() {
+  if (width < 520) {
+    return 3.8;
+  }
+  if (width < 700) {
+    return 4.2;
+  }
+  return spriteScaleFactor;
+}
+
 
 
 
