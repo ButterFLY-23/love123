@@ -328,6 +328,24 @@ body::after {
 
   .play-area {
     min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  #scene {
+    flex: 1;
+    border-radius: 18px;
+  }
+
+  .hud {
+    position: static;
+    width: 100%;
+  }
+
+  .reveal {
+    bottom: 18px;
   }
 
   .note {
