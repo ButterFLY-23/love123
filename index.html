@@ -1,0 +1,52 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Открытка ко Дню святого Валентина</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="card">
+    <header class="hero">
+      <p class="eyebrow">День всех влюбленных</p>
+      <h1>Собери 14 сердечек</h1>
+      <p class="subtitle">Перемещайся по экрану, чтобы ловить падающие сердца.</p>
+    </header>
+
+    <section class="play-area" aria-live="polite">
+      <canvas id="scene" aria-label="Мини-игра с падающими сердечками"></canvas>
+
+      <div class="hud">
+        <div class="counter">
+          <span class="counter__label">Собрано</span>
+          <span id="countValue" class="counter__value">0</span>
+          <span class="counter__goal">/ 14</span>
+        </div>
+        <div id="statusText" class="status">Лови сердечки, пока они не коснулись земли.</div>
+        <button id="musicToggle" class="music-toggle" type="button" aria-pressed="false">Музыка: выкл</button>
+      </div>
+
+      <button id="revealBtn" class="reveal" type="button" hidden>Открыть признание</button>
+
+      <div id="message" class="message" hidden>
+        <div class="message__content">
+          <h2>С Днем святого Валентина!</h2>
+          <p>
+            Ты — мое спокойствие, вдохновение и самый теплый дом.
+            Спасибо, что собираешь мои сердечки и бережешь их.
+          </p>
+          <p class="message__accent">Я тебя люблю.</p>
+          <button id="againBtn" class="again" type="button">Собрать еще</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="note">Подсказка: сердечки летят быстрее, но их всегда можно поймать.</footer>
+  </main>
+
+  <audio id="bgMusic" src="Cults - Always Forever.mp3" loop preload="auto"></audio>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
